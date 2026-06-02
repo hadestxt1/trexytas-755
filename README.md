@@ -128,3 +128,5 @@ Website ini tidak membutuhkan build step, dependency manager, atau backend.
 - Animasi scroll ada pada class `.reveal` dan JavaScript `IntersectionObserver`.
 - Tombol salin amplop digital memakai Clipboard API dengan fallback sederhana.
 - Lightbox galeri dibuat dengan vanilla JavaScript tanpa dependency eksternal.
+
+.
