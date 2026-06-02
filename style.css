@@ -563,13 +563,25 @@ textarea {
   position: fixed;
   inset: 0;
   z-index: 60;
-  display: grid;
+  display: none;
   place-items: center;
   padding: 24px;
   background: rgba(30, 26, 22, 0.82);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.lightbox.is-active {
+  display: grid;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .lightbox img {
+  position: relative;
+  z-index: 61;
   width: min(92vw, 780px);
   max-height: 82vh;
   object-fit: contain;
@@ -581,6 +593,7 @@ textarea {
   position: fixed;
   top: 18px;
   right: 18px;
+  z-index: 62;
   width: 44px;
   height: 44px;
   border: 0;
@@ -589,6 +602,7 @@ textarea {
   background: var(--white);
   font-size: 2rem;
   cursor: pointer;
+  pointer-events: auto;
 }
 
 .reveal {

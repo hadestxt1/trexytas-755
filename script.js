@@ -22,6 +22,7 @@ const lightboxImage = document.getElementById('lightboxImage');
 const closeLightbox = document.getElementById('closeLightbox');
 
 let musicAvailable = true;
+let lightboxRequestId = 0;
 
 function setGuestNameFromUrl() {
   const params = new URLSearchParams(window.location.search);
@@ -209,31 +210,67 @@ function setupCopyButtons() {
   });
 }
 
+function closeGalleryLightbox() {
+  lightboxRequestId += 1;
+  lightbox.classList.remove('is-active');
+  lightbox.hidden = true;
+  lightboxImage.removeAttribute('src');
+}
+
+function openGalleryLightbox(imageSrc, imageAlt) {
+  if (!imageSrc) return;
+
+  const requestId = lightboxRequestId + 1;
+  lightboxRequestId = requestId;
+  const previewImage = new Image();
+
+  previewImage.addEventListener('load', () => {
+    if (requestId !== lightboxRequestId) return;
+
+    lightboxImage.src = imageSrc;
+    lightboxImage.alt = imageAlt || 'Foto galeri diperbesar';
+    lightbox.hidden = false;
+    lightbox.classList.add('is-active');
+  });
+
+  previewImage.addEventListener('error', () => {
+    if (requestId === lightboxRequestId) {
+      closeGalleryLightbox();
+    }
+  });
+
+  previewImage.src = imageSrc;
+}
+
 function setupGalleryLightbox() {
+  closeGalleryLightbox();
+
   document.querySelectorAll('#galleryGrid button').forEach((button) => {
     button.addEventListener('click', () => {
-      lightboxImage.src = button.dataset.image;
-      lightboxImage.alt = button.querySelector('img').alt;
-      lightbox.hidden = false;
+      const thumbnail = button.querySelector('img');
+      const thumbnailSrc = thumbnail?.currentSrc || thumbnail?.getAttribute('src');
+      const imageSrc = button.dataset.image || thumbnailSrc;
+
+      if (!thumbnailSrc || !imageSrc || (thumbnail?.complete && thumbnail.naturalWidth === 0)) {
+        closeGalleryLightbox();
+        return;
+      }
+
+      openGalleryLightbox(imageSrc, thumbnail?.alt);
     });
   });
 
-  closeLightbox.addEventListener('click', () => {
-    lightbox.hidden = true;
-    lightboxImage.removeAttribute('src');
-  });
+  closeLightbox.addEventListener('click', closeGalleryLightbox);
 
   lightbox.addEventListener('click', (event) => {
     if (event.target === lightbox) {
-      lightbox.hidden = true;
-      lightboxImage.removeAttribute('src');
+      closeGalleryLightbox();
     }
   });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && !lightbox.hidden) {
-      lightbox.hidden = true;
-      lightboxImage.removeAttribute('src');
+      closeGalleryLightbox();
     }
   });
 }
