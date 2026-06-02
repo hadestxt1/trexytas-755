@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Groom placeholder</title>
+  <desc id="desc">Elegant green and gold placeholder portrait for groom.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#e8eee2"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="300" cy="245" r="88" fill="#75836d" opacity=".9"/>
+  <path d="M147 512c24-105 91-159 153-159s129 54 153 159" fill="#8c6a31" opacity=".78"/>
+  <path d="M134 104c78-56 254-72 332 44" fill="none" stroke="#b99455" stroke-width="8" stroke-linecap="round" opacity=".45"/>
+  <text x="300" y="552" text-anchor="middle" font-family="Georgia, serif" font-size="36" fill="#8c6a31">Agung</text>
+</svg>
