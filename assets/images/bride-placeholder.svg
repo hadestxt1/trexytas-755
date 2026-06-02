@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Bride placeholder</title>
+  <desc id="desc">Elegant cream and gold placeholder portrait for bride.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#f5ead6"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <path d="M204 300c-20-110 22-190 96-190s116 80 96 190c-14 80-180 80-192 0Z" fill="#b99455" opacity=".6"/>
+  <circle cx="300" cy="245" r="82" fill="#75836d" opacity=".85"/>
+  <path d="M140 515c25-108 96-164 160-164s135 56 160 164" fill="#fffdf8" stroke="#b99455" stroke-width="7"/>
+  <text x="300" y="552" text-anchor="middle" font-family="Georgia, serif" font-size="36" fill="#8c6a31">Inayatun</text>
+</svg>
