@@ -5,7 +5,7 @@
 // =============================================================
 const weddingDate = '2027-06-01T08:00:00+07:00';
 const defaultGuestName = 'Bapak/Ibu/Saudara/i';
-const storageKey = 'agung-inayatun-wishes';
+const storageKey = 'ibnu-revalina-wishes';
 
 const cover = document.getElementById('openingCover');
 const openButton = document.getElementById('openInvitation');
