@@ -1,6 +1,6 @@
-# agung-inayatun-wedding-invitation
+# ibnu-revalina-wedding-invitation
 
-Website undangan pernikahan statis untuk **Agung Laksana** dan **Inayatun Ma'fuah**. Dibuat dengan HTML, CSS, dan vanilla JavaScript agar ringan, mobile-first, dan siap dipublikasikan melalui GitHub Pages.
+Website undangan pernikahan statis untuk **Ibnu** dan **Revalina**. Dibuat dengan HTML, CSS, dan vanilla JavaScript agar ringan, mobile-first, dan siap dipublikasikan melalui GitHub Pages.
 
 ## Struktur File
 
@@ -11,12 +11,11 @@ Website undangan pernikahan statis untuk **Agung Laksana** dan **Inayatun Ma'fua
 ├── script.js
 ├── assets/
 │   ├── images/
-│   │   ├── bride-placeholder.svg
-│   │   ├── groom-placeholder.svg
-│   │   ├── gallery-1.svg
-│   │   ├── gallery-2.svg
-│   │   ├── gallery-3.svg
-│   │   └── gallery-4.svg
+│   │   ├── foto1.jpg
+│   │   ├── foto2.jpg
+│   │   ├── foto3.jpg
+│   │   ├── foto4.jpg
+│   │   └── foto5.jpg
 │   └── music/
 │       └── background.mp3  # tambahkan sendiri, tidak disertakan
 └── README.md
@@ -28,8 +27,8 @@ Website undangan pernikahan statis untuk **Agung Laksana** dan **Inayatun Ma'fua
 
 Edit teks nama di `index.html`, terutama pada bagian:
 
-- Opening cover: `The Wedding of Agung & Inayatun`
-- Hero: `Agung Laksana` dan `Inayatun Ma'fuah`
+- Opening cover: `The Wedding of Ibnu & Revalina`
+- Hero: `Ibnu` dan `Revalina`
 - Profil mempelai
 - Closing section
 
@@ -78,7 +77,7 @@ Catatan: website tidak memaksa autoplay. Musik baru diputar setelah tamu menekan
 
 ## Cara Menambahkan Foto
 
-Ganti file placeholder di folder `assets/images/` dengan foto Anda sendiri, atau ubah path gambar di `index.html`.
+Template ini memakai foto yang sudah tersedia di folder `assets/images/`: `foto1.jpg`, `foto2.jpg`, `foto3.jpg`, `foto4.jpg`, dan `foto5.jpg`. Untuk mengganti foto, ubah path gambar di `index.html` atau timpa file tersebut secara terpisah.
 
 Rekomendasi:
 
@@ -86,7 +85,7 @@ Rekomendasi:
 - Foto galeri: rasio portrait 4:5, minimal 1000 px pada sisi panjang.
 - Kompres gambar agar website tetap cepat dibuka di ponsel.
 
-Jika memakai nama file baru, update atribut `src` dan `data-image` pada bagian galeri di `index.html`.
+Bagian profil memakai `foto1.jpg` dan `foto2.jpg`, sementara galeri memakai semua file `foto1.jpg` sampai `foto5.jpg`. Jika memakai nama file baru, update atribut `src` dan `data-image` pada bagian galeri di `index.html`.
 
 ## Guest Name Query Parameter
 
@@ -95,7 +94,7 @@ Website mendukung nama tamu melalui parameter URL `to`.
 Contoh:
 
 ```text
-https://username.github.io/agung-inayatun-wedding-invitation/?to=Nama%20Tamu
+https://username.github.io/ibnu-revalina-wedding-invitation/?to=Nama%20Tamu
 ```
 
 Nama tersebut akan tampil pada opening cover. Jika parameter tidak tersedia, halaman menampilkan sapaan default `Bapak/Ibu/Saudara/i`.
