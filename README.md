@@ -11,11 +11,13 @@ Website undangan pernikahan statis untuk **Ibnu** dan **Revalina**. Dibuat denga
 ├── script.js
 ├── assets/
 │   ├── images/
-│   │   ├── foto1.jpg
-│   │   ├── foto2.jpg
-│   │   ├── foto3.jpg
-│   │   ├── foto4.jpg
-│   │   └── foto5.jpg
+│   │   ├── bride.jpg
+│   │   ├── gallery-1.jpg
+│   │   ├── gallery-2.jpg
+│   │   ├── gallery-3.jpg
+│   │   ├── gallery-4.jpg
+│   │   ├── gallery-5.jpg
+│   │   └── groom.jpg
 │   └── music/
 │       └── background.mp3  # tambahkan sendiri, tidak disertakan
 └── README.md
@@ -77,7 +79,7 @@ Catatan: website tidak memaksa autoplay. Musik baru diputar setelah tamu menekan
 
 ## Cara Menambahkan Foto
 
-Template ini memakai foto yang sudah tersedia di folder `assets/images/`: `foto1.jpg`, `foto2.jpg`, `foto3.jpg`, `foto4.jpg`, dan `foto5.jpg`. Untuk mengganti foto, ubah path gambar di `index.html` atau timpa file tersebut secara terpisah.
+Template ini memakai foto yang sudah tersedia di folder `assets/images/`: `groom.jpg`, `bride.jpg`, `gallery-1.jpg`, `gallery-2.jpg`, `gallery-3.jpg`, `gallery-4.jpg`, dan `gallery-5.jpg`. Untuk mengganti foto, ubah path gambar di `index.html` atau timpa file tersebut secara terpisah.
 
 Rekomendasi:
 
@@ -85,7 +87,7 @@ Rekomendasi:
 - Foto galeri: rasio portrait 4:5, minimal 1000 px pada sisi panjang.
 - Kompres gambar agar website tetap cepat dibuka di ponsel.
 
-Bagian profil memakai `foto1.jpg` dan `foto2.jpg`, sementara galeri memakai semua file `foto1.jpg` sampai `foto5.jpg`. Jika memakai nama file baru, update atribut `src` dan `data-image` pada bagian galeri di `index.html`.
+Bagian profil memakai `groom.jpg` dan `bride.jpg`, sementara galeri memakai semua file `gallery-1.jpg` sampai `gallery-5.jpg`. Jika memakai nama file baru, update atribut `src` dan `data-image` pada bagian galeri di `index.html`.
 
 ## Guest Name Query Parameter
 
